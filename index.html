@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +30,11 @@
   .carousel-slide-v { flex: none; height: 20%; width: 100%; box-sizing: border-box; background-size: cover; background-position: center; }
   .portrait-slot { width: 100%; aspect-ratio: 1/1; background: #DADCD4; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #6E6A5F; font-family: sans-serif; text-align: center; overflow: hidden; }
   .portrait-slot img { width: 100%; height: 100%; object-fit: cover; display: none; }
+  .link-card { height: auto; min-height: 164px; }
+  @media (max-width: 400px) {
+    .link-card { grid-template-columns: 110px 1fr !important; }
+    .link-card > div:first-child { min-height: 130px; }
+  }
 </style>
 <div style="min-height: 100%; background-color: #1B1D1C; display: flex; justify-content: center; padding: 28px 16px 60px; font-family: 'Syne', sans-serif; font-weight: 500; color: #1B1D1C;">
   <!-- Background illustration -->
@@ -95,29 +101,29 @@
 
 <!-- Link cards -->
 <div style="display: flex; flex-direction: column; gap: 0px;">
-  <a href="https://lbylian.com/web-design-case-studies.html" class="link-card" style="height: 164px; display: grid; grid-template-columns: 164px 1fr; border: 2px solid #BFF47B; background-color: #F1F2EC; box-shadow: 0 16px 32px rgba(27,29,28,0.18), 0 4px 8px rgba(27,29,28,0.12);">
+  <a href="https://lbylian.com/web-design-case-studies.html" class="link-card" style="display: grid; grid-template-columns: 164px 1fr; border: 2px solid #BFF47B; background-color: #F1F2EC; box-shadow: 0 16px 32px rgba(27,29,28,0.18), 0 4px 8px rgba(27,29,28,0.12);">
     <div style="background: #E8B93F; border-right: 1px solid #1B1D1C;">
       <div style="width: 100%; height: 100%; background-image: url(https://raw.githubusercontent.com/lianlicodes-cmd/lbylian-site/main/assets/catriona-hero-image.webp); background-size: cover; background-position: center;"></div>
     </div>
-    <div style="padding: 16px 16px 16px 18px; display: flex; gap: 12px; align-items: flex-start;">
-      <div style="flex: 1;">
+    <div style="padding: 16px 16px 16px 18px; display: flex; gap: 12px; align-items: flex-start; min-width: 0;">
+      <div style="flex: 1; min-width: 0;">
         <div style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6A5F;">Link:</div>
         <div style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 17px; letter-spacing: -0.01em; text-transform: uppercase; margin: 5px 0 9px;">Design</div>
-        <div style="font-size: 11.5px; line-height: 1.7; color: #4A4740;">A look at recent projects, from hand-coded builds to Squarespace enhancements and garden photography.</div>
+        <div style="font-size: 11.5px; line-height: 1.7; color: #4A4740; text-wrap: pretty;">A look at recent projects, from hand-coded builds to Squarespace enhancements and garden photography.</div>
       </div>
       <div style="width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 32px solid #BFF47B; flex: none; align-self: center;"></div>
     </div>
   </a>
 
-  <a href="https://www.instagram.com/lbylian/" class="link-card" style="height: 164px; display: grid; grid-template-columns: 164px 1fr; border: 2px solid #BFF47B; background-color: #F1F2EC; box-shadow: 0 16px 32px rgba(27,29,28,0.18), 0 4px 8px rgba(27,29,28,0.12);">
+  <a href="https://www.instagram.com/lbylian/" class="link-card" style="display: grid; grid-template-columns: 164px 1fr; border: 2px solid #BFF47B; background-color: #F1F2EC; box-shadow: 0 16px 32px rgba(27,29,28,0.18), 0 4px 8px rgba(27,29,28,0.12);">
     <div style="background: #EFCDBA; border-right: 1px solid #1B1D1C;">
       <div style="width: 100%; height: 100%; background-image: url(https://raw.githubusercontent.com/lianlicodes-cmd/digital-business-card/main/images/lbylian_instagram.png); background-size: cover; background-position: center;"></div>
     </div>
-    <div style="padding: 16px 16px 16px 18px; display: flex; gap: 12px; align-items: flex-start;">
-      <div style="flex: 1;">
+    <div style="padding: 16px 16px 16px 18px; display: flex; gap: 12px; align-items: flex-start; min-width: 0;">
+      <div style="flex: 1; min-width: 0;">
         <div style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6A5F;">Link:</div>
         <div style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 17px; letter-spacing: -0.01em; text-transform: uppercase; margin: 5px 0 9px;">Instagram</div>
-        <div style="font-size: 11.5px; line-height: 1.7; color: #4A4740;">Design projects and garden photography.</div>
+        <div style="font-size: 11.5px; line-height: 1.7; color: #4A4740; text-wrap: pretty;">Design projects and garden photography.</div>
       </div>
       <div style="width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 32px solid #BFF47B; flex: none; align-self: center;"></div>
     </div>
