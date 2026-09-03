@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +101,7 @@
 </div>
 
 <!-- Link cards -->
-<div style="display: flex; flex-direction: column; gap: 0px;">
+<div id="link-cards" style="display: flex; flex-direction: column; gap: 0px;"></div>
  <a href="https://lbylian.com/" class="link-card" style="display: grid; grid-template-columns: 164px 1fr; border: 2px solid #BFF47B; background-color: #F1F2EC; box-shadow: 0 16px 32px rgba(27,29,28,0.18), 0 4px 8px rgba(27,29,28,0.12);">
     <div style="background: #E8B93F; border-right: 1px solid #1B1D1C;">
       <div style="width: 100%; height: 100%; background-image: url(https://raw.githubusercontent.com/lianlicodes-cmd/lbylian-site/main/assets/catriona-hero-image.webp); background-size: cover; background-position: center;"></div>
@@ -219,5 +220,31 @@
   makeCarousel('carousel-h', 'x', 5, 2000);
   makeCarousel('carousel-v', 'y', 5, 2000);
 </script>
+
+
+<script>
+
+fetch('Linkboard/content/links.json')
+  .then(res => res.json())
+  .then(links => {
+    const wrap = document.getElementById('link-cards');
+    wrap.innerHTML = links.map(link => `
+      <a href="${link.url}" class="link-card" style="display: grid; grid-template-columns: 164px 1fr; border: 2px solid #BFF47B; background-color: #F1F2EC; box-shadow: 0 16px 32px rgba(27,29,28,0.18), 0 4px 8px rgba(27,29,28,0.12);">
+        <div style="background: #E8B93F; border-right: 1px solid #1B1D1C;">
+          <div style="width: 100%; height: 100%; background-image: url(${link.image}); background-size: cover; background-position: center;"></div>
+        </div>
+        <div style="padding: 16px 16px 16px 18px; display: flex; gap: 12px; align-items: flex-start; min-width: 0;">
+          <div style="flex: 1; min-width: 0;">
+            <div style="font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6A5F;">Link:</div>
+            <div style="font-family: 'Syne', sans-serif; font-weight: 800; font-size: 17px; letter-spacing: -0.01em; text-transform: uppercase; margin: 5px 0 9px;">${link.title}</div>
+            <div style="font-size: 11.5px; line-height: 1.7; color: #4A4740; text-wrap: pretty;">${link.description}</div>
+          </div>
+          <div style="width: 0; height: 0; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 32px solid #BFF47B; flex: none; align-self: center;"></div>
+        </div>
+      </a>
+    `).join('');
+  });
+</script>
+
 </body>
 </html>
