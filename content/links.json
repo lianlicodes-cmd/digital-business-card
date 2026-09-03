@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Design",
+    "url": "https://lbylian.com/",
+    "description": "A look at recent projects, from hand-coded builds to Squarespace enhancements and garden photography.",
+    "image": "https://raw.githubusercontent.com/lianlicodes-cmd/lbylian-site/main/assets/catriona-hero-image.webp"
+  },
+  {
+    "title": "Instagram",
+    "url": "https://www.instagram.com/lbylian/",
+    "description": "Design projects and garden photography.",
+    "image": "https://raw.githubusercontent.com/lianlicodes-cmd/digital-business-card/main/images/lbylian_instagram.png"
+  }
+]
