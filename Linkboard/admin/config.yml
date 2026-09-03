@@ -32,8 +32,8 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 # Add site links in Decap CMS (optional)
 site_url: https://lianlicodes-cmd.github.io
 
-media_folder: "Linkboard/images"
-public_folder: "/digital-business-card/Linkboard/images"
+media_folder: "images"
+public_folder: "/digital-business-card/images"
 
 collections:
   - name: "linkboard"
@@ -41,5 +41,15 @@ collections:
     files:
       - name: "links"
         label: "Link Cards"
-        file: "Linkboard/content/links.json"
+        file: "content/links.json"
         fields:
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+
+
